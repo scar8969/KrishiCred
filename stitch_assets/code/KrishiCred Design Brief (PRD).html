@@ -1,0 +1,41 @@
+# KrishiCred Frontend Design Brief
+
+## Project Overview
+KrishiCred is an AI-powered climate finance platform that turns crop residue burning into profit. We detect stubble burning via satellite, route stubble to biogas plants, and monetize carbon credits.
+
+**Tagline:** Pollution into Profit
+**Target Users:** Farmers (Punjabi-speaking), Biogas Plant Operators, Government Officials, Carbon Credit Buyers
+
+---
+
+## Design Philosophy
+| Principle | Description |
+| :--- | :--- |
+| **Rural-First** | Design for low-literacy users, poor connectivity, small screens |
+| **Bilingual** | Punjabi (primary) + Hindi + English |
+| **WhatsApp-Centric** | Mirror WhatsApp's familiar UI patterns |
+| **High Contrast** | Outdoor visibility under bright sunlight |
+| **Thumb-Friendly** | Large touch targets (min 44px), bottom navigation |
+
+### Color Palette
+- **Primary:** Emerald Green (#10B981) - growth, agriculture
+- **Alert:** Orange/Red - fire detection
+- **Money:** Amber/Gold - earnings, carbon credits
+- **Neutral:** Warm grays - rural aesthetic
+
+---
+
+## Pages to Design
+1. **Landing Page (HomePage):** Headline "Turn Stubble Burning Into Profit" (Punjabi: à¨ªà¨°à¨¾à¨²à© à¨¨à©à©° à¨®à©à¨¨à¨¾à¨«à¨¼à© à¨µà¨¿à©±à¨ à¨¬à¨¦à¨²à©), 3 key stats, WhatsApp CTA.
+2. **Government Dashboard:** Real-time monitoring, stats grid, live fire map, district rankings.
+3. **Plant Dashboard:** Biogas operations, collection routes, capacity gauge.
+4. **Carbon Marketplace:** Credit browsing, verified badges, tCO2e details.
+5. **WhatsApp Interface:** Familiar chat flows for registration, alerts, and payments.
+
+---
+
+## Technology Stack
+- **Framework:** React 18, React Router v6
+- **State:** Zustand
+- **Maps/Charts:** Leaflet, Recharts
+- **Styling:** Tailwind CSS, Lucide Icons

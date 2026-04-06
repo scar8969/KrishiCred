@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KrishiCred | Carbon Marketplace</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary": "#ffffff",
+                    "surface-tint": "#006c49",
+                    "on-background": "#121c28",
+                    "tertiary-container": "#ff7a73",
+                    "surface-dim": "#d1dbec",
+                    "tertiary-fixed-dim": "#ffb3ad",
+                    "surface-container-high": "#dfe9fa",
+                    "on-tertiary-fixed-variant": "#930013",
+                    "surface-container-low": "#eef4ff",
+                    "secondary-fixed-dim": "#ffb95f",
+                    "on-secondary-fixed-variant": "#653e00",
+                    "primary-fixed": "#6ffbbe",
+                    "on-primary-fixed-variant": "#005236",
+                    "on-secondary-fixed": "#2a1700",
+                    "secondary-fixed": "#ffddb8",
+                    "inverse-on-surface": "#eaf1ff",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed": "#002113",
+                    "on-surface-variant": "#3c4a42",
+                    "surface-container-lowest": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-error": "#ffffff",
+                    "surface-container": "#e5eeff",
+                    "on-secondary-container": "#684000",
+                    "surface-variant": "#d9e3f4",
+                    "outline": "#6c7a71",
+                    "surface": "#f8f9ff",
+                    "on-surface": "#121c28",
+                    "secondary": "#855300",
+                    "on-tertiary-container": "#79000e",
+                    "on-tertiary-fixed": "#410004",
+                    "on-error-container": "#93000a",
+                    "tertiary": "#b91a24",
+                    "tertiary-fixed": "#ffdad7",
+                    "primary": "#006c49",
+                    "outline-variant": "#bbcabf",
+                    "primary-fixed-dim": "#4edea3",
+                    "inverse-primary": "#4edea3",
+                    "on-primary-container": "#00422b",
+                    "secondary-container": "#fea619",
+                    "on-tertiary": "#ffffff",
+                    "surface-bright": "#f8f9ff",
+                    "primary-container": "#10b981",
+                    "surface-container-highest": "#d9e3f4",
+                    "inverse-surface": "#27313e",
+                    "background": "#f8f9ff",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Be Vietnam Pro"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
+        h1, h2, h3, .headline { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface antialiased pb-32">
+<!-- Top App Bar -->
+<header class="bg-[#f8f9ff] docked full-width top-0 z-40 sticky">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="close-up portrait of a proud Indian farmer with a turban smiling warmly against a blurred green field background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAS3ldqa2qM9RuATHMKnzoj0sxHbPQTU-Zb54__Dkh0YoUNxlstQIP1LEeqsEesELgFt3Dgq1SZzlXnE9gCZSLYG6xgoYaCpoUbAr4UMy__0Ty4jWu1JeCsscyRDCMBHgTu4OoBs_H_3dTlLCNX531H3M0WbgRIDX1-vqIJ6DnjGtGytkDRwhYbUOhw2T6ANjlZP_IpzAkKGt1Bp0jhd4WdJ2KsPwAwlh-0wrmIbJ68uplNoBbQ4btsJ-4IOSg_TlggJupwJlts3gc"/>
+</div>
+<span class="plusJakartaSans font-bold text-xl uppercase tracking-wider text-[#006c49]">KrishiCred</span>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-[#dfe9fa] transition-colors scale-95 active:scale-90">
+<span class="material-symbols-outlined text-[#3c4a42]" data-icon="notifications">notifications</span>
+</button>
+</div>
+</header>
+<main class="px-6 space-y-8">
+<!-- Marketplace Stats: Bento Style -->
+<section class="grid grid-cols-2 gap-4">
+<div class="col-span-2 bg-primary-container p-6 rounded-3xl flex flex-col justify-between relative overflow-hidden group">
+<div class="z-10">
+<p class="text-on-primary-container/80 text-sm font-medium uppercase tracking-widest mb-1">Total Credits</p>
+<h2 class="text-4xl font-extrabold text-on-primary-container">1.2M</h2>
+<p class="text-on-primary-container/60 text-xs mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="trending_up">trending_up</span> 14% from last month
+                    </p>
+</div>
+<div class="absolute -right-10 -bottom-10 opacity-20 group-hover:scale-110 transition-transform duration-700">
+<span class="material-symbols-outlined text-[120px]" data-icon="eco" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-3xl shadow-sm">
+<p class="text-on-surface-variant text-[10px] font-bold uppercase tracking-wider mb-2">Avg Price</p>
+<div class="flex items-baseline gap-1">
+<span class="text-xl font-bold text-on-surface">â¹450</span>
+<span class="text-[10px] text-on-surface-variant font-medium">/ton</span>
+</div>
+</div>
+<div class="bg-secondary-container p-5 rounded-3xl shadow-sm">
+<p class="text-on-secondary-container text-[10px] font-bold uppercase tracking-wider mb-2">Volume</p>
+<div class="flex items-baseline gap-1">
+<span class="text-xl font-bold text-on-secondary-container">â¹540M</span>
+</div>
+</div>
+</section>
+<!-- Search & Filter -->
+<section class="space-y-4">
+<div class="flex gap-3">
+<div class="flex-1 bg-surface-container-lowest flex items-center px-4 py-3 rounded-2xl shadow-sm border border-outline-variant/10">
+<span class="material-symbols-outlined text-outline" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 w-full text-sm placeholder:text-outline-variant" placeholder="Search by Project or ID..." type="text"/>
+</div>
+<button class="bg-surface-container-high w-12 h-12 flex items-center justify-center rounded-2xl hover:bg-[#dfe9fa] active:scale-95 transition-all">
+<span class="material-symbols-outlined text-on-surface" data-icon="tune">tune</span>
+</button>
+</div>
+<div class="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
+<span class="px-4 py-2 bg-primary text-on-primary rounded-full text-xs font-semibold whitespace-nowrap">All Districts</span>
+<span class="px-4 py-2 bg-surface-container text-on-surface-variant rounded-full text-xs font-semibold whitespace-nowrap">Verified Only</span>
+<span class="px-4 py-2 bg-surface-container text-on-surface-variant rounded-full text-xs font-semibold whitespace-nowrap">Low Quantity</span>
+<span class="px-4 py-2 bg-surface-container text-on-surface-variant rounded-full text-xs font-semibold whitespace-nowrap">Punjab Reg.</span>
+</div>
+</section>
+<!-- Credit Grid -->
+<section class="space-y-6">
+<div class="flex justify-between items-end">
+<h3 class="headline text-2xl font-extrabold text-on-surface">Available Credits</h3>
+<span class="text-primary font-bold text-sm">View Map</span>
+</div>
+<div class="space-y-4">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-[2rem] p-6 shadow-sm border border-outline-variant/5 space-y-4 transition-transform active:scale-[0.98]">
+<div class="flex justify-between items-start">
+<div>
+<span class="text-[10px] font-bold text-outline uppercase tracking-widest">ID: CRDT-2024-001</span>
+<h4 class="text-lg font-bold text-on-surface mt-1">Regenerative Paddy Cultivation</h4>
+</div>
+<span class="bg-primary-container/20 text-on-primary-container px-3 py-1 rounded-full text-[10px] font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+                            Satellite Verified â
+                        </span>
+</div>
+<div class="flex items-center gap-4 py-2">
+<div class="w-12 h-12 rounded-2xl bg-surface-container-low flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover opacity-80" data-alt="Close up of lush green rice paddy stalks with water droplets, bright sunny lighting, natural texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGZqeaFqZNmuvhLwP1VXKXbHG8W0nDay05CstanzjvtVBMThRgic2f2HiOM0id_sYi_fS7lAzUHO_ilQ7rRO0xgoZoNur07ZzwxGzAXE22hzRagEtJwkMHmGYNY01LKvcQC6pmzkOJbnIwRze733sRpD_iw1war8GHws_NnDdb-LVDE9Nz6KzaFFRlfrj6Grf_XrGqhApZSDS4VKuaX3n9TDPH_5AWwAcmAgxq9Sg5hkoaBGbhQSv_ZxGNX573CXTvGtAaopK2ER0"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between">
+<span class="text-on-surface-variant text-xs">Quantity</span>
+<span class="text-on-surface font-bold text-sm">12.5 tCO2e</span>
+</div>
+<div class="flex justify-between mt-1">
+<span class="text-on-surface-variant text-xs">Price</span>
+<span class="text-secondary font-bold text-sm">â¹420/ton</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 pt-3 border-t border-outline-variant/10">
+<div class="w-8 h-8 rounded-full bg-surface-variant overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="portrait of an elderly indian farmer with weathered skin and a humble expression, wearing traditional white clothing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmmDfSl19WF4HBO0usneDTsOVT7-CUn_lYTIbOd9ShTacHl0-WIzBTjTK4CsIDZ0--zATJOoPLBSfFl82_9bpoaM1-1owE_dazXwg1ShbXvmM7jdXTBAJMTgXwHZbOJFh4yNJ-gRsB0z1rgrGyOP8knA11vxyiQ_jXI-N7JrA88GgU2Kz6ckk0vjJLdR0bNrxIVgn6MZ7BhkYCHU5-EhB7_dorT_KcUzJmGSeuhM0Cl_H1a7E-ycl1WoOknWc7E4ZXx52HRGEf7ws"/>
+</div>
+<div class="flex-1">
+<p class="text-[10px] text-on-surface-variant font-medium">Seller</p>
+<p class="text-xs font-bold text-on-surface">Farmer Gurdial Singh, Ludhiana</p>
+</div>
+<button class="bg-primary text-on-primary px-5 py-3 rounded-2xl text-xs font-bold active:scale-90 transition-transform">Buy Credits</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-[2rem] p-6 shadow-sm border border-outline-variant/5 space-y-4 opacity-90 grayscale-[0.2]">
+<div class="flex justify-between items-start">
+<div>
+<span class="text-[10px] font-bold text-outline uppercase tracking-widest">ID: CRDT-2024-054</span>
+<h4 class="text-lg font-bold text-on-surface mt-1">Agro-Forestry Sequestration</h4>
+</div>
+<span class="bg-primary-container/20 text-on-primary-container px-3 py-1 rounded-full text-[10px] font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+                            Satellite Verified â
+                        </span>
+</div>
+<div class="flex items-center gap-4 py-2">
+<div class="w-12 h-12 rounded-2xl bg-surface-container-low flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover opacity-80" data-alt="dense cluster of poplar trees in a neat row on a farm, morning sunlight filtering through the leaves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCcGdO4SENqa-_7EcYOCP1LlMR7Yl-CT-3j3UZxxcWw8vp0zOU87aomfushEaNlw0uTl9NH_hU6GuE6BA_SXZ8PGoni0dvj8uWaPgR4_KQK0SKasSFy1iUz9tKSQNH3Vqxik6x6XhFqT-kpwtJNrsFp1sOdhVO2_AQxxYYOAi0iAoDDTlULMsiKzn0PV4noDhzuR3Q01hMr-vaBqWVPuzxWdgVJjTh0b2IDkfjQzrRIuCvlLZxtirFz2ZqZ6sghbjzrleD050jHnQ"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between">
+<span class="text-on-surface-variant text-xs">Quantity</span>
+<span class="text-on-surface font-bold text-sm">45.0 tCO2e</span>
+</div>
+<div class="flex justify-between mt-1">
+<span class="text-on-surface-variant text-xs">Price</span>
+<span class="text-secondary font-bold text-sm">â¹485/ton</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 pt-3 border-t border-outline-variant/10">
+<div class="w-8 h-8 rounded-full bg-surface-variant overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Indian male farmer in his late 40s standing in a sunlit grove, looking towards the camera with confidence" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_nmyslLiqflu3EHtq4eUhfC3C8VMmVpxni_A1AIDl4-9v-cAW3ZaQuzZd5wfMtbdTephs7YTqSPC9ulsb9I1rMJ96ZZ5de53wZyg1lmg-rZC_g_Mttk3TeMWVC1j4K8i_CuoIQtY9uGfeFD1VuVpkrvjfTCMDdSAAgwGL2z1d7hu1xxQcJLR19SRd40j2nAnFuJbcmpTI_hcwCCCgp9fAhFRli_L9UnKCP7679wFkp0rMNgUP8UIt05kciNO73pYXwIQgCZfS4wU"/>
+</div>
+<div class="flex-1">
+<p class="text-[10px] text-on-surface-variant font-medium">Seller</p>
+<p class="text-xs font-bold text-on-surface">Satnam Singh, Sangrur</p>
+</div>
+<button class="bg-primary text-on-primary px-5 py-3 rounded-2xl text-xs font-bold active:scale-90 transition-transform">Buy Credits</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Detailed View Preview (Task Specific) -->
+<section class="bg-on-surface text-surface rounded-[2.5rem] p-8 space-y-6 overflow-hidden relative">
+<div class="absolute top-0 right-0 p-8">
+<span class="material-symbols-outlined text-primary-fixed-dim" data-icon="open_in_full">open_in_full</span>
+</div>
+<div class="space-y-2">
+<h3 class="headline text-2xl font-bold">Impact Spotlight</h3>
+<p class="text-surface-dim text-sm leading-relaxed">Meet Satnam Singh. By switching to no-till farming, he's avoided 45 tons of carbon emissions this season alone.</p>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white/10 backdrop-blur-md p-4 rounded-2xl space-y-1">
+<span class="material-symbols-outlined text-primary-fixed" data-icon="history_edu">history_edu</span>
+<p class="text-[10px] text-surface-dim font-bold uppercase">Verification</p>
+<a class="text-xs font-semibold text-primary-fixed-dim flex items-center gap-1 underline underline-offset-4" href="#">
+                        View Certificate <span class="material-symbols-outlined text-[10px]" data-icon="launch">launch</span>
+</a>
+</div>
+<div class="bg-white/10 backdrop-blur-md p-4 rounded-2xl space-y-1">
+<span class="material-symbols-outlined text-secondary-fixed" data-icon="family_history">family_history</span>
+<p class="text-[10px] text-surface-dim font-bold uppercase">Community</p>
+<p class="text-xs font-semibold text-white">Impact Story â</p>
+</div>
+</div>
+<div class="pt-4">
+<div class="bg-surface-container-low/20 h-40 rounded-3xl relative overflow-hidden flex items-center justify-center">
+<img class="absolute inset-0 w-full h-full object-cover opacity-50" data-alt="Wide shot of a golden wheat field at sunset with satellite UI elements overlaid like grid lines and temperature markers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-WlX3FJHPbVIAcLUtXs6GvMqlsKKUobf2pdmxNvLU-ewlGEnCwbZbf6AOLS5hQT7QK6Viv4Ca9p3asicfuPh_VQPDV53AR53OF-40AxZtGsxTaTdyXlgH4YdZD-7er2NlMTZLTPqNSFM74xbqUSA_ZwRSxgBRjcF-Ortw6GCixRL0-d6Shtm-hYtst4v7zM8y87dY30U2e_kY3y4XIko74Y-jHMyikgqzLKYQDsLCvVXDDJaO3ZdCA4zRwLPlFU1JPNF5dVx2EpM"/>
+<div class="z-10 text-center">
+<p class="text-xs font-bold text-white mb-2">Live Satellite Monitoring</p>
+<button class="bg-white text-on-surface px-4 py-2 rounded-full text-[10px] font-black uppercase">Project Details</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 bg-[#f8f9ff]/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-[0_-8px_32px_rgba(18,28,40,0.06)] rounded-t-3xl border-t-[0.5px] border-[#bbcabf]/15">
+<div class="flex flex-col items-center justify-center text-[#3c4a42] dark:text-slate-400 px-5 py-2 hover:text-[#006c49] tap-highlight-transparent active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="plusJakartaSans font-semibold text-[11px]">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#3c4a42] dark:text-slate-400 px-5 py-2 hover:text-[#006c49] tap-highlight-transparent active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="plusJakartaSans font-semibold text-[11px]">Dashboard</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-[#10b981]/10 text-[#006c49] dark:text-[#6ffbbe] rounded-2xl px-5 py-2 tap-highlight-transparent active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="storefront" style="font-variation-settings: 'FILL' 1;">storefront</span>
+<span class="plusJakartaSans font-semibold text-[11px]">Marketplace</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#3c4a42] dark:text-slate-400 px-5 py-2 hover:text-[#006c49] tap-highlight-transparent active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="plusJakartaSans font-semibold text-[11px]">Account</span>
+</div>
+</nav>
+<!-- Navigation Drawer Handle (Subtle Hint) -->
+<div class="fixed left-0 top-1/2 -translate-y-1/2 w-1.5 h-16 bg-outline-variant/30 rounded-r-full"></div>
+</body></html>

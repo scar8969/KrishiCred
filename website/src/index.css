@@ -1,0 +1,415 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-outline;
+  }
+
+  body {
+    @apply bg-background text-on-background font-body;
+    min-height: 100vh;
+  }
+
+  /* Material Symbols Outlined font variation settings */
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+
+  .material-symbols-outlined.filled {
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+
+  /* Typography classes */
+  .font-display {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  .font-body {
+    font-family: 'Be Vietnam Pro', 'Inter', sans-serif;
+  }
+
+  /* Punjabi text - slightly larger for visual parity */
+  .text-punjabi {
+    font-size: 1.1em;
+    font-family: 'Noto Sans Gurmukhi', 'Be Vietnam Pro', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6, .headline {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+@layer components {
+  /* Focus Visible - Accessibility */
+  .focus-ring {
+    @apply outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary;
+  }
+
+  .focus-ring-inset {
+    @apply outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary;
+  }
+
+  /* Interactive Elements - cursor pointer */
+  .interactive {
+    @apply cursor-pointer;
+  }
+
+  /* Button Components - Stitch Design System */
+  .btn {
+    @apply px-6 py-4 rounded-xl font-semibold transition-all duration-200 min-h-[56px];
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .btn:active {
+    @apply scale-95;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-on-primary shadow-md hover:opacity-90;
+    background: linear-gradient(135deg, #006c49 0%, #10b981 100%);
+  }
+
+  .btn-secondary {
+    @apply bg-secondary-container text-on-secondary-container hover:opacity-90;
+    background: linear-gradient(135deg, #fea619 0%, #855300 100%);
+  }
+
+  .btn-tertiary {
+    @apply bg-tertiary-container text-on-tertiary-container hover:opacity-90;
+  }
+
+  .btn-outline {
+    @apply bg-transparent border-2 border-outline text-on-surface hover:bg-surface-container-low;
+  }
+
+  .btn-ghost {
+    @apply bg-transparent text-on-surface hover:bg-surface-container-low;
+  }
+
+  .btn-fab {
+    @apply w-14 h-14 rounded-full shadow-lg flex items-center justify-center;
+  }
+
+  /* Card Components - Stitch Design System (No-Line Rule) */
+  .card {
+    @apply bg-surface-container-lowest rounded-card p-6;
+  }
+
+  .card-elevated {
+    @apply bg-surface-container-lowest rounded-card p-6 shadow-ambient;
+  }
+
+  .card-interactive {
+    @apply bg-surface-container-lowest rounded-card p-6 shadow-ambient hover:shadow-ambient-lg cursor-pointer transition-shadow;
+  }
+
+  /* Input Components */
+  .input {
+    @apply w-full px-4 py-4 bg-surface-container-lowest rounded-card text-on-surface;
+    @apply border-2 border-transparent outline-none transition-all;
+    @apply focus:border-primary focus:ring-4 focus:ring-primary/20;
+    min-h: [56px];
+  }
+
+  .input:focus {
+    background-color: rgba(111, 251, 190, 0.1);
+  }
+
+  .select {
+    @apply w-full px-4 py-4 bg-surface-container-lowest rounded-card text-on-surface;
+    @apply border-2 border-transparent outline-none;
+    min-h: [56px];
+  }
+
+  /* Status Chips/Badges */
+  .chip {
+    @apply px-4 py-2 rounded-full text-label-medium font-semibold;
+  }
+
+  .chip-success {
+    @apply bg-primary-container text-on-primary-container;
+  }
+
+  .chip-warning {
+    @apply bg-secondary-container text-on-secondary-container;
+  }
+
+  .chip-error {
+    @apply bg-tertiary-container text-on-tertiary-container;
+  }
+
+  .chip-info {
+    @apply bg-surface-container-high text-on-surface;
+  }
+
+  /* Signature Gradient */
+  .signature-gradient {
+    background: linear-gradient(135deg, #006c49 0%, #10b981 100%);
+  }
+
+  .gold-gradient {
+    background: linear-gradient(135deg, #fea619 0%, #855300 100%);
+  }
+
+  /* Hero Background Pattern */
+  .bg-rural-hero {
+    background-image: linear-gradient(to bottom, rgba(248, 249, 255, 0.4), rgba(248, 249, 255, 1)),
+      url('https://lh3.googleusercontent.com/aida-public/AB6AXuAhNKI_y90XrMuL-V_FpjWi9afl3gvXldya8DKoq84F1OcraD2GEbf63NmSYWHa52KvnvJfDkOhiGcocT-fvwEDBEcFhCJvXjo6EDikoRk-wXGk62RDDI_BF9ZcHNzm9IpXFTystcxg-57EVyiVGbZHVCDEuxtdXKR5SvXm8Buj1KLXUkF7k0bgesX9AiVtD5l6qpsVL34pRivk4w9dMGaA2sF8jsHanx9xy6B8Zd8CPfZFkfgZfe1KFV2kXwELiL1pWcGxkFccp18');
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Glassmorphism */
+  .glass {
+    @apply bg-surface/80 backdrop-blur-md;
+  }
+
+  /* Container Classes */
+  .container-narrow {
+    @apply max-w-4xl mx-auto px-6;
+  }
+
+  .container-medium {
+    @apply max-w-6xl mx-auto px-6;
+  }
+
+  .container-wide {
+    @apply max-w-7xl mx-auto px-6;
+  }
+}
+
+/* Custom Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse-fire {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes gradient-x {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.fire-pulse {
+  animation: pulse-fire 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-gradient-x {
+  background-size: 200% 100%;
+  animation: gradient-x 3s ease infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.3s ease-out;
+}
+
+/* Leaflet customization */
+.leaflet-container {
+  font-family: 'Be Vietnam Pro', 'Inter', sans-serif;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 1rem;
+}
+
+.leaflet-popup-content {
+  @apply bg-surface-container-lowest text-on-surface;
+}
+
+/* WhatsApp message bubble */
+.whatsapp-bubble {
+  @apply rounded-2xl px-4 py-2 max-w-xs;
+}
+
+.whatsapp-bubble.sent {
+  @apply bg-primary-container/20 rounded-br-sm;
+}
+
+.whatsapp-bubble.received {
+  @apply bg-surface-container-lowest rounded-bl-sm shadow-sm;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-surface-container;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-outline-variant rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-outline;
+}
+
+/* Loading States */
+.skeleton {
+  @apply bg-surface-container animate-pulse;
+}
+
+.skeleton-text {
+  @apply rounded h-4 w-3/4;
+}
+
+.skeleton-avatar {
+  @apply rounded-full h-12 w-12;
+}
+
+/* Status Indicators */
+.status-dot {
+  @apply w-3 h-3 rounded-full;
+}
+
+.status-dot.online {
+  @apply bg-primary;
+}
+
+.status-dot.offline {
+  @apply bg-on-surface-variant;
+}
+
+.status-dot.busy {
+  @apply bg-secondary;
+}
+
+.status-dot.error {
+  @apply bg-error;
+}
+
+/* Responsive Grid Bento */
+.bento-grid {
+  @apply grid gap-6;
+}
+
+.bento-grid.cols-1 {
+  @apply grid-cols-1;
+}
+
+.bento-grid.cols-2 {
+  @apply grid-cols-1 md:grid-cols-2;
+}
+
+.bento-grid.cols-3 {
+  @apply grid-cols-1 md:grid-cols-3;
+}
+
+.bento-grid.cols-4 {
+  @apply grid-cols-1 md:grid-cols-2 lg:grid-cols-4;
+}
+
+/* Stats Card */
+.stats-card {
+  @apply card flex flex-col justify-between min-h-[180px];
+}
+
+.stats-card.highlight {
+  @apply bg-primary-container/10;
+}
+
+/* Progress Styles */
+.progress-ring {
+  @apply relative inline-flex items-center justify-center;
+}
+
+.progress-ring circle {
+  @apply transition-all duration-300;
+}
+
+/* Map Styles */
+.fire-map-marker {
+  @apply relative;
+}
+
+.fire-map-marker::after {
+  content: '';
+  @apply absolute inset-0 rounded-full animate-ping;
+  @apply bg-tertiary opacity-50;
+}
+
+/* Notification Badge */
+.notification-badge {
+  @apply absolute -top-1 -right-1 w-5 h-5 rounded-full;
+  @apply bg-error text-on-error text-xs;
+  @apply flex items-center justify-center font-semibold;
+}
+
+/* Bottom Navigation */
+.bottom-nav-item {
+  @apply flex flex-col items-center justify-center gap-1;
+  @apply p-2 rounded-xl transition-all duration-200 cursor-pointer;
+  @apply text-on-surface-variant hover:text-primary hover:bg-primary-container/10;
+  @apply focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:outline-none;
+}
+
+.bottom-nav-item.active {
+  @apply text-primary bg-primary-container/20;
+}

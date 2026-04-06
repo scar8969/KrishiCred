@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-container": "#79000e",
+                    "tertiary-container": "#ff7a73",
+                    "on-error": "#ffffff",
+                    "surface-dim": "#d1dbec",
+                    "primary-fixed-dim": "#4edea3",
+                    "inverse-surface": "#27313e",
+                    "on-primary-container": "#00422b",
+                    "tertiary-fixed-dim": "#ffb3ad",
+                    "on-tertiary": "#ffffff",
+                    "on-surface": "#121c28",
+                    "surface-container-high": "#dfe9fa",
+                    "on-tertiary-fixed-variant": "#930013",
+                    "primary": "#006c49",
+                    "inverse-on-surface": "#eaf1ff",
+                    "primary-container": "#10b981",
+                    "on-background": "#121c28",
+                    "surface-variant": "#d9e3f4",
+                    "secondary-fixed": "#ffe08f",
+                    "on-surface-variant": "#3c4a42",
+                    "surface-container": "#e5eeff",
+                    "on-secondary-fixed": "#241a00",
+                    "surface-container-highest": "#d9e3f4",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#755b00",
+                    "surface-container-low": "#eef4ff",
+                    "surface": "#f8f9ff",
+                    "secondary-fixed-dim": "#f2c01a",
+                    "outline": "#6c7a71",
+                    "on-primary-fixed": "#002113",
+                    "error": "#ba1a1a",
+                    "background": "#f8f9ff",
+                    "on-primary-fixed-variant": "#005236",
+                    "on-error-container": "#93000a",
+                    "on-secondary": "#ffffff",
+                    "surface-bright": "#f8f9ff",
+                    "primary-fixed": "#6ffbbe",
+                    "on-secondary-fixed-variant": "#584400",
+                    "tertiary": "#b91a24",
+                    "on-secondary-container": "#6f5600",
+                    "on-tertiary-fixed": "#410004",
+                    "tertiary-fixed": "#ffdad7",
+                    "on-primary": "#ffffff",
+                    "outline-variant": "#bbcabf",
+                    "surface-tint": "#006c49",
+                    "error-container": "#ffdad6",
+                    "secondary-container": "#fecb29",
+                    "inverse-primary": "#4edea3"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-emerald-700 dark:text-emerald-500" data-icon="agriculture">agriculture</span>
+<span class="text-2xl font-black tracking-tight text-emerald-800 dark:text-emerald-400">KrishiCred</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-600" data-icon="notifications">notifications</span>
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center overflow-hidden border-2 border-primary-container">
+<img class="w-full h-full object-cover" data-alt="professional portrait of a government official in a clean business suit, soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBScjJEvESFvgTwpO8InsamfFJ0qYMuJ8uUFbQ400Rw1X3MJpMPQC90R20xT_VG5pyvY-lf3mScrlsKPzH2TnoPhMwpY1Buobkhry9U3DMyeG1iiLx4sY0z_IhsDm4I0Dys_KLJY7nyPK9t44OGE1TbOu8cgLjPW-P-qDlEcMncnN7t80pcW6lesbi8SP1kAEL-jgL4rT94ZKYHfR3WbaZL66WV52AwdLr9A26wYdz6d2Rp0oRju0MqHr-0HzmoW6I7iHeiuNZMWYc"/>
+</div>
+</div>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-5xl mx-auto">
+<!-- Header Section -->
+<section class="mb-12">
+<span class="text-primary font-bold tracking-widest text-xs uppercase mb-2 block">Administrative Portal</span>
+<h1 class="text-4xl font-extrabold text-on-surface leading-tight mb-4">Government Monitoring Journey</h1>
+<p class="text-on-surface-variant text-lg max-w-2xl">A real-time operational flow for stubble burning mitigation and compliance tracking across agricultural districts.</p>
+</section>
+<!-- Journey Flow: Bento Grid Style -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Step 1: Real-time Fire Detection -->
+<div class="md:col-span-7 bg-surface-container-lowest rounded-xl p-8 shadow-sm border-l-4 border-primary relative overflow-hidden">
+<div class="flex justify-between items-start mb-6">
+<div>
+<div class="flex items-center gap-3 mb-2">
+<span class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm">1</span>
+<h2 class="text-xl font-bold">Real-time Fire Detection</h2>
+</div>
+<p class="text-on-surface-variant text-sm">Satellite-based thermal imaging &amp; multi-spectral analysis.</p>
+</div>
+<span class="material-symbols-outlined text-tertiary text-3xl" data-icon="satellite_alt">satellite_alt</span>
+</div>
+<div class="relative h-48 w-full rounded-lg overflow-hidden mb-4 bg-surface-container-low">
+<img class="w-full h-full object-cover opacity-80" data-alt="satellite view of agricultural fields with thermal heat map overlay showing hotspots in glowing red" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHkWrCvga6JuKM9gCux8C_iFY4E2gJceUBP2r4wS94hSjie0uYvWnqdIodvx24Ib9GB94vwImJyjAzzhCuXE8ErgUZlEmWyAO2N7uDQxN5FiqVftuUHdi-rgH19spwxjWxe6edVcVpA7le4MG0hrXj8iPb-ckRUboUFj-mqSIHXwUX9YGholqxjoHI558oTw6-SEBOkaaC8xzXEsj3T3vn6rdO6g2ZIFJTKezIBemJGOyaQKBSFK0KrjuDQWbZsAJ6JRU_bEYWDZg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+<div class="absolute bottom-4 left-4 flex gap-2">
+<span class="px-3 py-1 bg-tertiary text-white text-[10px] font-bold rounded-full uppercase tracking-tighter">Active Fire Detected</span>
+<span class="px-3 py-1 bg-black/50 text-white text-[10px] font-bold rounded-full uppercase tracking-tighter">District: Sangrur</span>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex-1 bg-surface-container-low p-3 rounded-lg">
+<span class="text-[10px] text-slate-500 block uppercase font-bold mb-1">Confidence</span>
+<div class="text-lg font-bold text-primary">94.2%</div>
+</div>
+<div class="flex-1 bg-surface-container-low p-3 rounded-lg">
+<span class="text-[10px] text-slate-500 block uppercase font-bold mb-1">Update Frequency</span>
+<div class="text-lg font-bold text-primary">15 Mins</div>
+</div>
+</div>
+</div>
+<!-- Step 2: Alert Local Teams -->
+<div class="md:col-span-5 bg-tertiary-container text-on-tertiary-container rounded-xl p-8 shadow-sm relative flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-4">
+<span class="w-8 h-8 rounded-full bg-on-tertiary-container text-white flex items-center justify-center font-bold text-sm">2</span>
+<h2 class="text-xl font-bold">Alert Local Teams</h2>
+</div>
+<p class="text-on-tertiary-container/80 text-sm mb-6">Immediate dispatch of geofenced notifications to field officers and village heads.</p>
+</div>
+<div class="space-y-3">
+<div class="bg-white/30 backdrop-blur-sm p-4 rounded-lg flex items-center gap-4">
+<span class="material-symbols-outlined text-on-tertiary-container" data-icon="notifications_active" data-weight="fill" style="font-variation-settings: 'FILL' 1;">notifications_active</span>
+<div class="text-xs">
+<div class="font-bold">SMS Sent to 4 Officers</div>
+<div class="opacity-70">ETA: Field Arrival &lt; 30m</div>
+</div>
+</div>
+<div class="bg-white/30 backdrop-blur-sm p-4 rounded-lg flex items-center gap-4">
+<span class="material-symbols-outlined text-on-tertiary-container" data-icon="location_on">location_on</span>
+<div class="text-xs">
+<div class="font-bold">Dispatch Node 042</div>
+<div class="opacity-70">Sector G-14 Verification</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Step 3: Track Collection Compliance -->
+<div class="md:col-span-6 bg-surface-container-low rounded-xl p-8 shadow-sm relative overflow-hidden">
+<div class="flex items-center gap-3 mb-6">
+<span class="w-8 h-8 rounded-full bg-secondary text-white flex items-center justify-center font-bold text-sm">3</span>
+<h2 class="text-xl font-bold">Track Collection Compliance</h2>
+</div>
+<div class="flex items-end gap-6 mb-8">
+<div class="flex-1">
+<div class="text-4xl font-black text-secondary tracking-tighter mb-1">82%</div>
+<p class="text-xs font-semibold text-on-surface-variant uppercase tracking-wider">Straw Collection Rate</p>
+</div>
+<div class="w-24 h-24 relative">
+<svg class="w-full h-full transform -rotate-90">
+<circle class="text-surface-container-high" cx="48" cy="48" fill="transparent" r="40" stroke="currentColor" stroke-width="8"></circle>
+<circle class="text-secondary" cx="48" cy="48" fill="transparent" r="40" stroke="currentColor" stroke-dasharray="251.2" stroke-dashoffset="45" stroke-width="8"></circle>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary" data-icon="eco">eco</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-lg p-4">
+<div class="flex items-center justify-between text-xs mb-3 border-b border-surface-container-low pb-2">
+<span class="font-bold">Machine ID</span>
+<span class="font-bold">Status</span>
+<span class="font-bold">Load (Tons)</span>
+</div>
+<div class="flex items-center justify-between text-xs py-1">
+<span>MH-42-B9</span>
+<span class="text-primary font-bold">In Transit</span>
+<span>4.2</span>
+</div>
+<div class="flex items-center justify-between text-xs py-1">
+<span>PB-11-K4</span>
+<span class="text-primary font-bold">Active</span>
+<span>2.8</span>
+</div>
+</div>
+</div>
+<!-- Step 4: District Performance Reports -->
+<div class="md:col-span-6 bg-white rounded-xl p-8 shadow-sm border border-surface-container-high relative">
+<div class="flex items-center gap-3 mb-6">
+<span class="w-8 h-8 rounded-full bg-slate-800 text-white flex items-center justify-center font-bold text-sm">4</span>
+<h2 class="text-xl font-bold text-slate-800">District Performance Reports</h2>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<div class="h-2 flex-1 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-[90%]"></div>
+</div>
+<span class="text-xs font-bold text-on-surface w-16 text-right">Ludhiana</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="h-2 flex-1 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-[75%]"></div>
+</div>
+<span class="text-xs font-bold text-on-surface w-16 text-right">Patiala</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="h-2 flex-1 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-secondary-container w-[45%]"></div>
+</div>
+<span class="text-xs font-bold text-on-surface w-16 text-right">Bathinda</span>
+</div>
+</div>
+<div class="mt-8 flex justify-end">
+<button class="bg-primary text-white px-6 py-3 rounded-full text-sm font-bold flex items-center gap-2 shadow-lg shadow-primary/20 active:scale-95 duration-150">
+<span>Download Summary</span>
+<span class="material-symbols-outlined text-sm" data-icon="download">download</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Summary Section -->
+<section class="mt-12 bg-surface-container-low rounded-xl p-8 flex flex-col md:flex-row items-center gap-8 border border-white">
+<div class="flex-1">
+<h3 class="text-2xl font-bold mb-2">Operational Summary</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">The KrishiCred Government Portal synthesizes satellite telemetry with on-ground logistics to create a closed-loop mitigation strategy. By integrating carbon credit incentives with strict monitoring, we reduce stubble burning incidents by an average of 42% annually.</p>
+</div>
+<div class="grid grid-cols-2 gap-4 w-full md:w-auto">
+<div class="bg-white p-4 rounded-lg text-center">
+<div class="text-2xl font-black text-primary">1.4k</div>
+<div class="text-[10px] text-slate-500 font-bold uppercase tracking-widest">Hotspots Mitigated</div>
+</div>
+<div class="bg-white p-4 rounded-lg text-center">
+<div class="text-2xl font-black text-secondary">₹12.4M</div>
+<div class="text-[10px] text-slate-500 font-bold uppercase tracking-widest">Incentives Paid</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full rounded-t-[3rem] z-50 bg-white dark:bg-slate-900 shadow-[0_-4px_20px_rgba(0,0,0,0.06)]">
+<div class="flex justify-around items-end pb-4 pt-2 px-4 w-full">
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-2 hover:text-emerald-600 transition-transform active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="text-xs font-['Plus_Jakarta_Sans'] font-semibold">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-2 hover:text-emerald-600 transition-transform active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="shopping_cart">shopping_cart</span>
+<span class="text-xs font-['Plus_Jakarta_Sans'] font-semibold">Market</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-gradient-to-br from-emerald-600 to-emerald-400 text-white rounded-full p-3 mb-2 shadow-lg shadow-emerald-200/50 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="monitoring" data-weight="fill" style="font-variation-settings: 'FILL' 1;">monitoring</span>
+<span class="text-xs font-['Plus_Jakarta_Sans'] font-semibold">Stats</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-2 hover:text-emerald-600 transition-transform active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="text-xs font-['Plus_Jakarta_Sans'] font-semibold">Account</span>
+</a>
+</div>
+</nav>
+</body></html>

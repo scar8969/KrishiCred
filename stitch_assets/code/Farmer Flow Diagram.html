@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-container": "#79000e",
+                    "tertiary-container": "#ff7a73",
+                    "on-error": "#ffffff",
+                    "surface-dim": "#d1dbec",
+                    "primary-fixed-dim": "#4edea3",
+                    "inverse-surface": "#27313e",
+                    "on-primary-container": "#00422b",
+                    "tertiary-fixed-dim": "#ffb3ad",
+                    "on-tertiary": "#ffffff",
+                    "on-surface": "#121c28",
+                    "surface-container-high": "#dfe9fa",
+                    "on-tertiary-fixed-variant": "#930013",
+                    "primary": "#006c49",
+                    "inverse-on-surface": "#eaf1ff",
+                    "primary-container": "#10b981",
+                    "on-background": "#121c28",
+                    "surface-variant": "#d9e3f4",
+                    "secondary-fixed": "#ffe08f",
+                    "on-surface-variant": "#3c4a42",
+                    "surface-container": "#e5eeff",
+                    "on-secondary-fixed": "#241a00",
+                    "surface-container-highest": "#d9e3f4",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#755b00",
+                    "surface-container-low": "#eef4ff",
+                    "surface": "#f8f9ff",
+                    "secondary-fixed-dim": "#f2c01a",
+                    "outline": "#6c7a71",
+                    "on-primary-fixed": "#002113",
+                    "error": "#ba1a1a",
+                    "background": "#f8f9ff",
+                    "on-primary-fixed-variant": "#005236",
+                    "on-error-container": "#93000a",
+                    "on-secondary": "#ffffff",
+                    "surface-bright": "#f8f9ff",
+                    "primary-fixed": "#6ffbbe",
+                    "on-secondary-fixed-variant": "#584400",
+                    "tertiary": "#b91a24",
+                    "on-secondary-container": "#6f5600",
+                    "on-tertiary-fixed": "#410004",
+                    "tertiary-fixed": "#ffdad7",
+                    "on-primary": "#ffffff",
+                    "outline-variant": "#bbcabf",
+                    "surface-tint": "#006c49",
+                    "error-container": "#ffdad6",
+                    "secondary-container": "#fecb29",
+                    "inverse-primary": "#4edea3"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .step-connector {
+            background-image: radial-gradient(#bbcabf 1px, transparent 1px);
+            background-size: 8px 8px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm h-16 flex justify-between items-center px-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-emerald-700 dark:text-emerald-500 text-3xl">agriculture</span>
+<span class="font-headline font-black tracking-tight text-emerald-800 dark:text-emerald-400 text-2xl">KrishiCred</span>
+</div>
+<div class="h-10 w-10 rounded-full bg-surface-container-high flex items-center justify-center overflow-hidden">
+<img class="h-full w-full object-cover" data-alt="Close up portrait of a smiling Indian farmer wearing a light colored turban, outdoors in soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCZ4ryCnD-HGDO_O4He44RcPEIJFdOUmExyYk8dMbguJjWJwa6EykESUWSQGeMSaEmJAx6kxZqEdgfwndSVbbfgUiQ7wB9Jk3Ja8khN1BQPGUuPuzeWv27rqTTXO1u3_zCuryROHXmcSe6y2w7jEnGc5hh1WXFuABwFQEACXAOmIKk7RJonHuMbcnQdAdm1EUd2qLG-VbBCOdRarI0Y-s0CTNPUhKlNGuoMxmyFRb0s01SPGFxTZe83mJ0qVd4Gsft2r0j8r-LWMw"/>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-4xl mx-auto">
+<!-- Hero Editorial Section -->
+<section class="mb-12">
+<span class="bg-secondary-container text-on-secondary-container px-4 py-1.5 rounded-full font-label text-sm font-bold mb-4 inline-block uppercase tracking-wider">Farmer Journey</span>
+<h1 class="font-headline text-4xl md:text-5xl font-extrabold text-on-background leading-tight mb-4">Stubble-to-Profit</h1>
+<p class="text-on-surface-variant text-lg max-w-2xl leading-relaxed">Join the green revolution. Turn crop residue into climate wealth with a few taps on your phone. No burning, only earning.</p>
+</section>
+<!-- Journey Flow Container -->
+<div class="space-y-4">
+<!-- Step 1: WhatsApp Registration -->
+<div class="relative group">
+<div class="absolute -left-3 top-1/2 -translate-y-1/2 w-1 h-2/3 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm flex flex-col md:flex-row gap-6 items-start transition-all hover:shadow-md">
+<div class="w-16 h-16 rounded-full bg-emerald-50 flex-shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-emerald-600 text-3xl" style="font-variation-settings: 'FILL' 1;">chat</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline font-bold text-xl">1. WhatsApp Registration</h3>
+<span class="text-primary font-bold font-label text-xs tracking-widest uppercase">Start Here</span>
+</div>
+<p class="text-on-surface-variant mb-4">Register your farm using a simple WhatsApp chat in your native language.</p>
+<!-- WhatsApp Mockup -->
+<div class="bg-surface-container-low rounded-lg p-4 border-l-4 border-emerald-500">
+<p class="text-sm font-medium text-emerald-800 mb-1">à¨¸à¨¤à¨¿ à¨¸à©à¨°à© à¨à¨à¨¾à¨²! KrishiCred à¨µà¨¿à©±à¨ à¨¤à©à¨¹à¨¾à¨¡à¨¾ à¨¸à©à¨à¨à¨¤ à¨¹à©à¥¤</p>
+<p class="text-xs text-on-surface-variant italic">"Hello! Welcome to KrishiCred. Type 1 to link your Aadhaar &amp; Land records."</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Connector -->
+<div class="flex justify-center h-8">
+<div class="w-0.5 h-full bg-gradient-to-b from-primary/30 to-transparent"></div>
+</div>
+<!-- Step 2: Satellite Detection Alert -->
+<div class="relative group">
+<div class="absolute -left-3 top-1/2 -translate-y-1/2 w-1 h-2/3 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm flex flex-col md:flex-row gap-6 items-start transition-all hover:shadow-md">
+<div class="w-16 h-16 rounded-full bg-blue-50 flex-shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-blue-600 text-3xl" style="font-variation-settings: 'FILL' 1;">satellite_alt</span>
+</div>
+<div class="flex-1">
+<h3 class="font-headline font-bold text-xl mb-2">2. Satellite Detection Alert</h3>
+<p class="text-on-surface-variant mb-4">Our high-res satellites identify unburnt residue across your fields instantly.</p>
+<div class="grid grid-cols-2 gap-4">
+<div class="rounded-lg overflow-hidden relative aspect-video h-24">
+<img class="w-full h-full object-cover" data-alt="Satellite thermal view of agricultural fields showing different heat signatures of crops in green and brown tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKwcm55qoRNtSn78Aflyj8eYUC0Sl-XesvPLVrHFgqkM29fB3eo7auYbIwiR2U9bdNOG90lRlou16axtX2ExuexzsDPI3arrXbq1eHid2PJn0WpfwFw77_2KN8WYWkX_PZRwzTYezIwDWbQR4gjQfpwfJrhc3fcBhAy9ksEN-nEIyPCs1F-eI7GkIXHQJC12ETAGD1-nMVGDE4PB11mJkU3XqYofipBYV8HtXbnvY26U3CNRmCM_dGKErvpmqKvpXeE2L4e1j49o4"/>
+<div class="absolute inset-0 bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-white">gps_fixed</span>
+</div>
+</div>
+<div class="bg-tertiary-container/20 p-3 rounded-lg border-2 border-tertiary-container/30">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-on-tertiary-container text-lg">crisis_alert</span>
+<span class="font-bold text-[10px] uppercase text-on-tertiary-container">Alert</span>
+</div>
+<p class="text-[11px] font-bold text-on-tertiary-container leading-tight">Field ID #882: Residue Detected</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Connector -->
+<div class="flex justify-center h-8">
+<div class="w-0.5 h-full bg-gradient-to-b from-primary/30 to-transparent"></div>
+</div>
+<!-- Step 3: Pickup Confirmation -->
+<div class="relative group">
+<div class="absolute -left-3 top-1/2 -translate-y-1/2 w-1 h-2/3 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm flex flex-col md:flex-row gap-6 items-start transition-all hover:shadow-md">
+<div class="w-16 h-16 rounded-full bg-amber-50 flex-shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-amber-600 text-3xl" style="font-variation-settings: 'FILL' 1;">local_shipping</span>
+</div>
+<div class="flex-1">
+<h3 class="font-headline font-bold text-xl mb-2">3. Pickup Confirmation</h3>
+<p class="text-on-surface-variant mb-4">Our logistics partner collects the stubble directly from your farm gate.</p>
+<div class="bg-surface-container-low rounded-xl p-4 flex items-center gap-4">
+<div class="h-12 w-12 rounded-lg bg-white flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-primary">qr_code_2</span>
+</div>
+<div>
+<p class="text-xs font-bold text-primary uppercase">Assigned Truck</p>
+<p class="font-headline font-bold">PB-10-CZ-4432</p>
+<p class="text-[10px] text-on-surface-variant">Arriving within 4 hours</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Connector -->
+<div class="flex justify-center h-8">
+<div class="w-0.5 h-full bg-gradient-to-b from-primary/30 to-transparent"></div>
+</div>
+<!-- Step 4: Payment & Carbon Credits -->
+<div class="relative group">
+<div class="absolute -left-3 top-1/2 -translate-y-1/2 w-1 h-2/3 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="bg-gradient-to-br from-primary to-emerald-800 rounded-xl p-6 shadow-xl flex flex-col md:flex-row gap-6 items-start transition-all hover:scale-[1.02]">
+<div class="w-16 h-16 rounded-full bg-white/20 backdrop-blur-md flex-shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-3xl" style="font-variation-settings: 'FILL' 1;">payments</span>
+</div>
+<div class="flex-1 text-white">
+<h3 class="font-headline font-bold text-xl mb-2">4. Payment &amp; Carbon Credits</h3>
+<p class="text-white/80 mb-6">Receive direct payment for biomass and earn tradeable carbon credits for zero-burning.</p>
+<!-- Value Widget -->
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white/10 backdrop-blur-sm rounded-lg p-3">
+<p class="text-[10px] uppercase font-bold text-primary-fixed tracking-widest">Biomass Cash</p>
+<p class="text-2xl font-headline font-black">â¹12,450</p>
+</div>
+<div class="bg-secondary-container/20 backdrop-blur-sm rounded-lg p-3">
+<p class="text-[10px] uppercase font-bold text-secondary-fixed tracking-widest">Carbon Credits</p>
+<p class="text-2xl font-headline font-black">4.2 <span class="text-xs font-normal">MT</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Call to Action -->
+<div class="mt-16 text-center">
+<button class="bg-gradient-to-r from-primary to-primary-container text-white px-12 py-4 rounded-xl font-headline font-bold text-lg shadow-lg shadow-emerald-200/50 hover:shadow-xl active:scale-95 transition-all">
+                Join Now via WhatsApp
+            </button>
+<p class="mt-4 text-on-surface-variant font-label text-sm flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-emerald-600 text-sm">verified_user</span>
+                Trusted by 50,000+ Farmers in Punjab
+            </p>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full rounded-t-[3rem] z-50 bg-white dark:bg-slate-900 shadow-[0_-4px_20px_rgba(0,0,0,0.06)] flex justify-around items-end pb-4 pt-2 px-4">
+<a class="flex flex-col items-center justify-center bg-gradient-to-br from-emerald-600 to-emerald-400 text-white rounded-full p-3 mb-2 shadow-lg shadow-emerald-200/50" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-xs font-headline font-semibold">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-2 hover:text-emerald-600 transition-colors" href="#">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="text-xs font-headline font-semibold">Market</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-2 hover:text-emerald-600 transition-colors" href="#">
+<span class="material-symbols-outlined">monitoring</span>
+<span class="text-xs font-headline font-semibold">Stats</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-2 hover:text-emerald-600 transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-xs font-headline font-semibold">Account</span>
+</a>
+</nav>
+</body></html>
