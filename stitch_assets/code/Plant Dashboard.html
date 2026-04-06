@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KrishiCred - Biogas Plant Dashboard</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Plus Jakarta Sans & Be Vietnam Pro -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;family=Be+Vietnam+Pro:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#006c49",
+                        "on-background": "#121c28",
+                        "tertiary-container": "#ff7a73",
+                        "surface-dim": "#d1dbec",
+                        "tertiary-fixed-dim": "#ffb3ad",
+                        "surface-container-high": "#dfe9fa",
+                        "on-tertiary-fixed-variant": "#930013",
+                        "surface-container-low": "#eef4ff",
+                        "secondary-fixed-dim": "#ffb95f",
+                        "on-secondary-fixed-variant": "#653e00",
+                        "primary-fixed": "#6ffbbe",
+                        "on-primary-fixed-variant": "#005236",
+                        "on-secondary-fixed": "#2a1700",
+                        "secondary-fixed": "#ffddb8",
+                        "inverse-on-surface": "#eaf1ff",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#002113",
+                        "on-surface-variant": "#3c4a42",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-error": "#ffffff",
+                        "surface-container": "#e5eeff",
+                        "on-secondary-container": "#684000",
+                        "surface-variant": "#d9e3f4",
+                        "outline": "#6c7a71",
+                        "surface": "#f8f9ff",
+                        "on-surface": "#121c28",
+                        "secondary": "#855300",
+                        "on-tertiary-container": "#79000e",
+                        "on-tertiary-fixed": "#410004",
+                        "on-error-container": "#93000a",
+                        "tertiary": "#b91a24",
+                        "tertiary-fixed": "#ffdad7",
+                        "primary": "#006c49",
+                        "outline-variant": "#bbcabf",
+                        "primary-fixed-dim": "#4edea3",
+                        "inverse-primary": "#4edea3",
+                        "on-primary-container": "#00422b",
+                        "secondary-container": "#fea619",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#f8f9ff",
+                        "primary-container": "#10b981",
+                        "surface-container-highest": "#d9e3f4",
+                        "inverse-surface": "#27313e",
+                        "background": "#f8f9ff",
+                        "error": "#ba1a1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Be Vietnam Pro"],
+                        "label": ["Be Vietnam Pro"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+        }
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
+        h1, h2, h3, .headline { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- TopAppBar Section -->
+<header class="bg-[#f8f9ff] flex justify-between items-center w-full px-6 py-4 max-w-screen-2xl mx-auto sticky top-0 z-50">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="Close-up portrait of a proud Indian farmer wearing a traditional turban, warm lighting, outdoor agricultural setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4BLZFK8JuH41XFNexpCaNWCgYnxkk7hJRvfHowEl6CACxkp8yrMR_7CaxOUVH1WpMSeaZrLzYlrUwgm-oid5Rm5sRwiwxMSh07mGPkW2x4QP6_A-aLtvQGzKAKJ3WJuiA0JBff9iLoSQ5Zz6Y8RAmb0U_60LlU7lEkkwgOeTj4a5Yxh-gXP6Qd4Guso4Jyl6ERHJQRH2rDzoYCjK8aZJhAkfJz9YsXVkSKelIPXZ4HOqjFesp1c8RbMtDW-6d-qC2Lc42xquAkkc"/>
+</div>
+<div class="plusJakartaSans font-bold text-xl uppercase tracking-wider text-[#006c49]">KrishiCred</div>
+</div>
+<button class="text-[#3c4a42] hover:bg-[#dfe9fa] transition-colors p-2 rounded-full scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</header>
+<main class="px-6 space-y-6">
+<!-- Header & Capacity Gauge -->
+<section class="mt-4 space-y-4">
+<div class="flex justify-between items-end">
+<div>
+<p class="text-sm text-on-surface-variant font-medium">Sangrur District</p>
+<h1 class="text-2xl font-bold text-on-surface">Satnam BioEnergy</h1>
+</div>
+<div class="bg-primary-container/20 px-3 py-1 rounded-full border border-primary/10">
+<span class="text-xs font-bold text-primary">OPERATIONAL</span>
+</div>
+</div>
+<!-- Capacity Gauge Bento -->
+<div class="bg-surface-container-lowest rounded-3xl p-6 shadow-[0_-8px_32px_rgba(18,28,40,0.04)] relative overflow-hidden">
+<div class="flex items-center justify-between relative z-10">
+<div class="space-y-1">
+<p class="text-xs font-semibold text-on-surface-variant uppercase tracking-widest">Plant Capacity</p>
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-extrabold text-on-surface">65</span>
+<span class="text-xl font-bold text-on-surface-variant">%</span>
+</div>
+<p class="text-sm text-primary font-medium">Utilized today</p>
+</div>
+<div class="relative w-24 h-24">
+<svg class="w-full h-full transform -rotate-90">
+<circle class="text-surface-container" cx="48" cy="48" fill="transparent" r="40" stroke="currentColor" stroke-width="8"></circle>
+<circle class="text-primary" cx="48" cy="48" fill="transparent" r="40" stroke="currentColor" stroke-dasharray="251.2" stroke-dashoffset="87.9" stroke-width="8"></circle>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl">factory</span>
+</div>
+</div>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-10">
+<span class="material-symbols-outlined text-9xl">eco</span>
+</div>
+</div>
+</section>
+<!-- Stats Grid -->
+<section class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-4 rounded-2xl flex flex-col gap-2">
+<span class="material-symbols-outlined text-primary">forklift</span>
+<p class="text-xs font-medium text-on-surface-variant">Today's Intake</p>
+<h3 class="text-xl font-bold">85 tons</h3>
+</div>
+<div class="bg-surface-container-low p-4 rounded-2xl flex flex-col gap-2">
+<span class="material-symbols-outlined text-secondary">local_shipping</span>
+<p class="text-xs font-medium text-on-surface-variant">Active Vehicles</p>
+<h3 class="text-xl font-bold">12 units</h3>
+</div>
+<div class="bg-surface-container-low p-4 rounded-2xl flex flex-col gap-2">
+<span class="material-symbols-outlined text-primary">inventory_2</span>
+<p class="text-xs font-medium text-on-surface-variant">Stock Level</p>
+<h3 class="text-xl font-bold">82%</h3>
+</div>
+<div class="bg-surface-container-low p-4 rounded-2xl flex flex-col gap-2">
+<span class="material-symbols-outlined text-tertiary">location_on</span>
+<p class="text-xs font-medium text-on-surface-variant">Nearby Listings</p>
+<h3 class="text-xl font-bold">15 farm</h3>
+</div>
+</section>
+<!-- Add Nearby Stubble CTA -->
+<section>
+<button class="w-full bg-secondary-container p-5 rounded-3xl flex items-center justify-between group active:scale-95 transition-all shadow-lg shadow-secondary/10">
+<div class="flex items-center gap-4">
+<div class="bg-on-secondary-container/10 p-3 rounded-2xl">
+<span class="material-symbols-outlined text-on-secondary-container text-2xl" style="font-variation-settings: 'FILL' 1;">add_circle</span>
+</div>
+<div class="text-left">
+<h4 class="font-bold text-on-secondary-container">Add Nearby Stubble</h4>
+<p class="text-xs text-on-secondary-container/80 font-medium">3 new listings within 5km</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-secondary-container group-hover:translate-x-1 transition-transform">chevron_right</span>
+</button>
+</section>
+<!-- Today's Routes -->
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<h2 class="text-lg font-bold text-on-surface">Today's Routes</h2>
+<button class="text-primary text-sm font-bold">View Map</button>
+</div>
+<div class="bg-surface-container-lowest rounded-3xl p-5 shadow-sm space-y-4 border border-outline-variant/10">
+<div class="flex justify-between items-start">
+<div class="flex gap-3">
+<div class="w-12 h-12 bg-surface-container rounded-2xl flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">route</span>
+</div>
+<div>
+<h4 class="font-bold">Route #4</h4>
+<p class="text-xs text-on-surface-variant">Driver: Rajesh Kumar</p>
+</div>
+</div>
+<span class="bg-primary/10 text-primary text-[10px] font-bold px-2 py-1 rounded-full uppercase">In Progress</span>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 bg-surface-container-high py-3 rounded-xl font-bold text-sm text-on-surface flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">phone</span> Call Driver
+                    </button>
+<button class="w-12 bg-surface-container-high rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">more_horiz</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Supply Calendar -->
+<section class="space-y-4">
+<h2 class="text-lg font-bold text-on-surface">Supply Calendar</h2>
+<div class="bg-surface-container-low p-5 rounded-3xl">
+<div class="flex justify-between items-center mb-6">
+<div class="flex gap-1">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="w-2 h-2 rounded-full bg-primary/30"></span>
+<span class="w-2 h-2 rounded-full bg-primary/30"></span>
+</div>
+<p class="text-xs font-bold text-on-surface-variant">October 2023</p>
+</div>
+<div class="flex justify-between">
+<div class="flex flex-col items-center gap-3">
+<span class="text-[10px] font-bold text-on-surface-variant">MON</span>
+<div class="w-8 h-12 bg-primary rounded-full"></div>
+<span class="text-xs font-bold">12</span>
+</div>
+<div class="flex flex-col items-center gap-3">
+<span class="text-[10px] font-bold text-on-surface-variant">TUE</span>
+<div class="w-8 h-8 bg-primary-container/40 rounded-full mt-4"></div>
+<span class="text-xs font-bold">13</span>
+</div>
+<div class="flex flex-col items-center gap-3">
+<span class="text-[10px] font-bold text-on-surface-variant">WED</span>
+<div class="w-8 h-16 bg-primary rounded-full -mt-4"></div>
+<span class="text-xs font-bold">14</span>
+</div>
+<div class="flex flex-col items-center gap-3">
+<span class="text-[10px] font-bold text-on-surface-variant">THU</span>
+<div class="w-8 h-10 bg-primary/60 rounded-full mt-2"></div>
+<span class="text-xs font-bold">15</span>
+</div>
+<div class="flex flex-col items-center gap-3">
+<span class="text-[10px] font-bold text-on-surface-variant">FRI</span>
+<div class="w-8 h-14 bg-primary rounded-full -mt-2"></div>
+<span class="text-xs font-bold">16</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Fleet Status -->
+<section class="space-y-4">
+<h2 class="text-lg font-bold text-on-surface">Fleet Status</h2>
+<div class="flex gap-4 overflow-x-auto pb-4 scrollbar-hide">
+<!-- Compact Card 1 -->
+<div class="min-w-[160px] bg-surface-container-lowest p-4 rounded-2xl border border-outline-variant/10">
+<div class="flex justify-between items-start mb-3">
+<div class="text-[10px] font-black bg-surface-container px-2 py-0.5 rounded">PB-13-X-4421</div>
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+</div>
+<div class="space-y-1">
+<p class="text-[10px] text-on-surface-variant font-bold uppercase tracking-tighter">Load Capacity</p>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[85%]"></div>
+</div>
+<p class="text-xs font-bold">8.5 / 10 tons</p>
+</div>
+</div>
+<!-- Compact Card 2 -->
+<div class="min-w-[160px] bg-surface-container-lowest p-4 rounded-2xl border border-outline-variant/10">
+<div class="flex justify-between items-start mb-3">
+<div class="text-[10px] font-black bg-surface-container px-2 py-0.5 rounded">PB-13-X-9982</div>
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+</div>
+<div class="space-y-1">
+<p class="text-[10px] text-on-surface-variant font-bold uppercase tracking-tighter">Load Capacity</p>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary-container h-full w-[20%]"></div>
+</div>
+<p class="text-xs font-bold">2.0 / 10 tons</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar Section -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 bg-[#f8f9ff]/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-[0_-8px_32px_rgba(18,28,40,0.06)] border-t-[0.5px] border-[#bbcabf]/15 rounded-t-3xl">
+<div class="flex flex-col items-center justify-center text-[#3c4a42] px-5 py-2 hover:text-[#006c49] tap-highlight-transparent active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="plusJakartaSans font-semibold text-[11px]">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-[#10b981]/10 text-[#006c49] rounded-2xl px-5 py-2 tap-highlight-transparent active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="analytics" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<span class="plusJakartaSans font-semibold text-[11px]">Dashboard</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#3c4a42] px-5 py-2 hover:text-[#006c49] tap-highlight-transparent active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="storefront">storefront</span>
+<span class="plusJakartaSans font-semibold text-[11px]">Marketplace</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#3c4a42] px-5 py-2 hover:text-[#006c49] tap-highlight-transparent active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="plusJakartaSans font-semibold text-[11px]">Account</span>
+</div>
+</nav>
+</body></html>

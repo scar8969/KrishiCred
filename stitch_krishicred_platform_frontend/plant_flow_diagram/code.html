@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-container": "#79000e",
+                    "tertiary-container": "#ff7a73",
+                    "on-error": "#ffffff",
+                    "surface-dim": "#d1dbec",
+                    "primary-fixed-dim": "#4edea3",
+                    "inverse-surface": "#27313e",
+                    "on-primary-container": "#00422b",
+                    "tertiary-fixed-dim": "#ffb3ad",
+                    "on-tertiary": "#ffffff",
+                    "on-surface": "#121c28",
+                    "surface-container-high": "#dfe9fa",
+                    "on-tertiary-fixed-variant": "#930013",
+                    "primary": "#006c49",
+                    "inverse-on-surface": "#eaf1ff",
+                    "primary-container": "#10b981",
+                    "on-background": "#121c28",
+                    "surface-variant": "#d9e3f4",
+                    "secondary-fixed": "#ffe08f",
+                    "on-surface-variant": "#3c4a42",
+                    "surface-container": "#e5eeff",
+                    "on-secondary-fixed": "#241a00",
+                    "surface-container-highest": "#d9e3f4",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#755b00",
+                    "surface-container-low": "#eef4ff",
+                    "surface": "#f8f9ff",
+                    "secondary-fixed-dim": "#f2c01a",
+                    "outline": "#6c7a71",
+                    "on-primary-fixed": "#002113",
+                    "error": "#ba1a1a",
+                    "background": "#f8f9ff",
+                    "on-primary-fixed-variant": "#005236",
+                    "on-error-container": "#93000a",
+                    "on-secondary": "#ffffff",
+                    "surface-bright": "#f8f9ff",
+                    "primary-fixed": "#6ffbbe",
+                    "on-secondary-fixed-variant": "#584400",
+                    "tertiary": "#b91a24",
+                    "on-secondary-container": "#6f5600",
+                    "on-tertiary-fixed": "#410004",
+                    "tertiary-fixed": "#ffdad7",
+                    "on-primary": "#ffffff",
+                    "outline-variant": "#bbcabf",
+                    "surface-tint": "#006c49",
+                    "error-container": "#ffdad6",
+                    "secondary-container": "#fecb29",
+                    "inverse-primary": "#4edea3"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .flow-line {
+            background-image: linear-gradient(to bottom, transparent 50%, #bbcabf 50%);
+            background-size: 2px 20px;
+        }
+        .asymmetric-pattern {
+            background-image: radial-gradient(#10b981 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body text-on-background min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center px-6 h-16 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-emerald-700 dark:text-emerald-500 text-3xl" data-icon="agriculture">agriculture</span>
+<h1 class="font-['Plus_Jakarta_Sans'] font-black tracking-tight text-emerald-800 dark:text-emerald-400 text-2xl">KrishiCred</h1>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-slate-600 dark:text-slate-400 font-['Plus_Jakarta_Sans'] font-bold text-lg hidden md:block">Operations Hub</span>
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center overflow-hidden border-2 border-primary-container">
+<img alt="Avatar" data-alt="professional portrait of a modern farm manager wearing a cap and collared shirt in soft outdoor lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxrKKQzMcVpiz_vyh3gDtzr5TqZABMTHrqGbOgJO_b_kjkMG40YxWNsFMxRic26uyTVXfS1yuT-y1b7KVN_DNuzr1zgXvryRTJonuQG1MejMSjBUnk3VNSHF921cxFYTpe8VekuhvANvW0pdxOgOmq4GmGuFyEdMp-KPcZKQYrzupsZhoaZV_2L7qhHYLQUxQNQrNgFG7FFPLHvV6tc6cKhMHlGehvoMCrKICZvRqp8QvwyFoEjIZEb_RAdzm0nTs_MSD077Axl_o"/>
+</div>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-4 md:px-8 max-w-5xl mx-auto">
+<!-- Hero Section -->
+<section class="mb-12">
+<h2 class="font-headline text-4xl md:text-5xl font-extrabold text-on-surface mb-4 leading-tight">Biogas Plant Operations</h2>
+<p class="text-on-surface-variant text-lg max-w-2xl">Streamlining the journey from field stubble detection to inventory fulfillment. A closed-loop sustainability flow.</p>
+</section>
+<!-- Flow Diagram Container -->
+<div class="relative space-y-12">
+<!-- Step 1: Receive Stubble Alert -->
+<div class="relative flex flex-col md:flex-row items-start md:items-center gap-8 group">
+<div class="z-10 flex-shrink-0 w-20 h-20 rounded-xl bg-tertiary-container flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-on-tertiary-container text-4xl" data-icon="cell_tower">cell_tower</span>
+</div>
+<div class="bg-surface-container-lowest p-6 md:p-8 rounded-xl shadow-sm flex-grow border-l-8 border-tertiary-container">
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="bg-tertiary-container/20 text-on-tertiary-container px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-2 inline-block">Step 1</span>
+<h3 class="font-headline text-2xl font-bold text-on-surface">Receive Stubble Alert</h3>
+</div>
+<span class="material-symbols-outlined text-tertiary animate-pulse" data-icon="emergency_home" style="font-variation-settings: 'FILL' 1;">emergency_home</span>
+</div>
+<div class="grid md:grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-4 rounded-lg">
+<p class="text-label text-sm font-semibold text-on-surface-variant">Active Fires Detected</p>
+<p class="text-headline text-2xl font-black text-tertiary">14 Clusters</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-lg">
+<p class="text-label text-sm font-semibold text-on-surface-variant">Location Confidence</p>
+<p class="text-headline text-2xl font-black text-primary">98.2%</p>
+</div>
+</div>
+</div>
+<!-- Vertical Connector -->
+<div class="hidden md:block absolute left-10 top-20 h-12 w-0.5 border-l-2 border-dashed border-outline-variant"></div>
+</div>
+<!-- Step 2: Route Optimization -->
+<div class="relative flex flex-col md:flex-row items-start md:items-center gap-8 group">
+<div class="z-10 flex-shrink-0 w-20 h-20 rounded-xl bg-primary-container flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-on-primary-container text-4xl" data-icon="alt_route">alt_route</span>
+</div>
+<div class="bg-surface-container-lowest p-6 md:p-8 rounded-xl shadow-sm flex-grow border-l-8 border-primary-container">
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="bg-primary-container/20 text-on-primary-container px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-2 inline-block">Step 2</span>
+<h3 class="font-headline text-2xl font-bold text-on-surface">Route Optimization</h3>
+</div>
+<span class="material-symbols-outlined text-primary" data-icon="psychology">psychology</span>
+</div>
+<div class="relative rounded-lg overflow-hidden h-40 mb-4">
+<img alt="Map View" class="w-full h-full object-cover grayscale opacity-30" data-alt="abstract top-down map visualization with neon glowing green route lines on a dark minimal background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaJ2e2KbpQjhNEwiVZE-Yt6d1GKa7KSDaX4VZ_DAfPbInGCYBKnqlHsQxY13w7-xYTKL_UjAXT2va5DVVewTvp1HjDV3H_QSsdPgpcS0taX8GOmenRakx8FKWhrLsk9zVE3QDwS8YkUjjh82QvIcqqxGtsgq7xd8-Xz03yAw22_b-tDUp6PasPszniBKEovARRA7tXgLkwMmwEmzQCMut8_cdR63IIZY-Sdpc7VtgI7c8qQm5TMhcMLQIUHbkUtJW_j2By5NXoYPk"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-xl border border-primary-container/30">
+<p class="text-xs font-bold text-primary mb-1">AI Recommendation</p>
+<p class="text-sm font-semibold">Shortest Logistics Path Found</p>
+<div class="flex gap-2 mt-2">
+<span class="px-2 py-1 bg-surface-container rounded text-[10px] font-bold">2.4km Offset</span>
+<span class="px-2 py-1 bg-surface-container rounded text-[10px] font-bold">Low Traffic</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden md:block absolute left-10 top-20 h-12 w-0.5 border-l-2 border-dashed border-outline-variant"></div>
+</div>
+<!-- Step 3: Driver Dispatch -->
+<div class="relative flex flex-col md:flex-row items-start md:items-center gap-8 group">
+<div class="z-10 flex-shrink-0 w-20 h-20 rounded-xl bg-secondary-container flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-on-secondary-container text-4xl" data-icon="local_shipping">local_shipping</span>
+</div>
+<div class="bg-surface-container-lowest p-6 md:p-8 rounded-xl shadow-sm flex-grow border-l-8 border-secondary-container">
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="bg-secondary-container/20 text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-2 inline-block">Step 3</span>
+<h3 class="font-headline text-2xl font-bold text-on-surface">Driver Dispatch</h3>
+</div>
+<div class="flex -space-x-3">
+<img class="w-8 h-8 rounded-full border-2 border-white" data-alt="headshot of a smiling professional truck driver with a cap" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2_nsw4Tza8DGDXdI-8nqGoyELE7Pzsqz4CWjZG7-21RK8xNX6wYzx4FxR-6vQd8J9xarUJz0K6JkXg1Q7-YIGxiwlSdOQw3Bl-xIgax7E0Gnfot24kIPT9me26BPDczgQoWZnkDHU3cspikLUB4-d1QqgaH4xFIF_Ak3ixmUKM2gSRdPlSdA2rWM1msPETc2LdSEPCA_I4O8RdV-hrtaMy5oQ-l4xMYdAR6Hq90dcZBJVdGXCr5KSO2ukvlGh3TlnXoZmVetCb0M"/>
+<img class="w-8 h-8 rounded-full border-2 border-white" data-alt="headshot of a friendly logistic operator wearing a headset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEn9qKmjDjy2_mvRAlPE8F4jvYk1tBinVLr9w_NKBovA79MhCggySMUeqNqaVGc8h71F8hyG3KJ7oBRN_mGOw-WKt-rxCObK5-1P8oapEBeoebUAfr0Jk9Q2t-y9hnvkIPz8FWi-GJk1HcaCLqP7_B9Sx0Bet-GRoymWl1FDH7HJHc3T9EPbDkybZuZEcx2E7sZ5qmMBUohaiVjt9yfz4plFsyGUonH43y84F64F0hlvG0USDD5f2bRQkPTIuWRFfotKc9dn9VbDk"/>
+<div class="w-8 h-8 rounded-full bg-secondary text-white text-[10px] flex items-center justify-center border-2 border-white">+8</div>
+</div>
+</div>
+<div class="flex flex-wrap gap-3">
+<button class="bg-primary text-white font-bold py-2 px-6 rounded-full shadow-lg hover:shadow-primary-container/40 transition-all active:scale-95">
+                            Notify All Drivers
+                        </button>
+<button class="bg-surface-container-high text-on-surface font-bold py-2 px-6 rounded-full hover:bg-surface-container-highest transition-all">
+                            View Fleet Status
+                        </button>
+</div>
+</div>
+<div class="hidden md:block absolute left-10 top-20 h-12 w-0.5 border-l-2 border-dashed border-outline-variant"></div>
+</div>
+<!-- Step 4: Weigh-bridge & Inventory Update -->
+<div class="relative flex flex-col md:flex-row items-start md:items-center gap-8 group">
+<div class="z-10 flex-shrink-0 w-20 h-20 rounded-xl bg-surface-container-highest flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="inventory">inventory</span>
+</div>
+<div class="bg-surface-container-lowest p-6 md:p-8 rounded-xl shadow-sm flex-grow border-l-8 border-outline">
+<div class="flex justify-between items-start mb-6">
+<div>
+<span class="bg-outline/20 text-outline px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-2 inline-block">Step 4</span>
+<h3 class="font-headline text-2xl font-bold text-on-surface">Weigh-bridge &amp; Inventory</h3>
+</div>
+<span class="material-symbols-outlined text-outline" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="bg-surface-container-low rounded-2xl p-6 relative overflow-hidden">
+<div class="asymmetric-pattern absolute inset-0 opacity-10"></div>
+<div class="relative z-10 grid md:grid-cols-3 gap-6">
+<div>
+<p class="text-xs font-bold text-outline uppercase tracking-widest mb-1">Total Yield</p>
+<p class="text-3xl font-black text-on-surface">1,420 <span class="text-sm font-medium">MT</span></p>
+</div>
+<div>
+<p class="text-xs font-bold text-outline uppercase tracking-widest mb-1">Credits Issued</p>
+<p class="text-3xl font-black text-secondary">850 <span class="text-sm font-medium">CC</span></p>
+</div>
+<div>
+<p class="text-xs font-bold text-outline uppercase tracking-widest mb-1">Daily Goal</p>
+<div class="w-full bg-surface-container-high h-2 rounded-full mt-3">
+<div class="bg-primary h-full rounded-full w-3/4"></div>
+</div>
+<p class="text-right text-[10px] font-bold mt-1">75% Complete</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Call to Action -->
+<div class="mt-16 p-8 bg-gradient-to-br from-emerald-600 to-emerald-400 rounded-3xl text-white shadow-2xl relative overflow-hidden">
+<div class="relative z-10 flex flex-col md:flex-row justify-between items-center gap-6">
+<div>
+<h4 class="text-2xl font-black mb-2">Ready to expand capacity?</h4>
+<p class="text-emerald-50 opacity-90">View analytics for potential plant expansion sites.</p>
+</div>
+<button class="bg-white text-emerald-800 font-black py-4 px-10 rounded-full shadow-xl hover:scale-105 active:scale-95 transition-transform">
+                    View Impact Report
+                </button>
+</div>
+<span class="material-symbols-outlined absolute -right-8 -bottom-8 text-[12rem] opacity-10 rotate-12" data-icon="eco">eco</span>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full rounded-t-[3rem] z-50 bg-white dark:bg-slate-900 shadow-[0_-4px_20px_rgba(0,0,0,0.06)] border-t-0 bg-slate-50 dark:bg-slate-800/20">
+<div class="flex justify-around items-end pb-4 pt-2 px-4 w-full">
+<!-- Home -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-2 hover:text-emerald-600 dark:hover:text-emerald-300 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="home">home</span>
+<span class="text-xs font-['Plus_Jakarta_Sans'] font-semibold">Home</span>
+</a>
+<!-- Market -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-2 hover:text-emerald-600 dark:hover:text-emerald-300 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="shopping_cart">shopping_cart</span>
+<span class="text-xs font-['Plus_Jakarta_Sans'] font-semibold">Market</span>
+</a>
+<!-- Stats (Active) -->
+<a class="flex flex-col items-center justify-center bg-gradient-to-br from-emerald-600 to-emerald-400 text-white rounded-full p-3 mb-2 shadow-lg shadow-emerald-200/50 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="monitoring">monitoring</span>
+<span class="text-xs font-['Plus_Jakarta_Sans'] font-semibold">Stats</span>
+</a>
+<!-- Account -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-2 hover:text-emerald-600 dark:hover:text-emerald-300 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="person">person</span>
+<span class="text-xs font-['Plus_Jakarta_Sans'] font-semibold">Account</span>
+</a>
+</div>
+</nav>
+</body></html>
