@@ -62,8 +62,8 @@ class BiogasPlant(Base, TimestampMixin):
     address: Mapped[str] = mapped_column(Text, nullable=False)
     district: Mapped[str] = mapped_column(String(100), nullable=False, index=True)
     state: Mapped[str] = mapped_column(String(50), default="Punjab", nullable=False)
-    latitude: Mapped[float] = mapped_column(Float, nullable=False)
-    longitude: Mapped[float] = mapped_column(Float, nullable=False)
+    latitude: Mapped[Optional[float]] = mapped_column(Float, nullable=True)
+    longitude: Mapped[Optional[float]] = mapped_column(Float, nullable=True)
 
     # Capacity and utilization
     capacity_tons_per_day: Mapped[float] = mapped_column(
@@ -90,8 +90,8 @@ class BiogasPlant(Base, TimestampMixin):
     )
 
     # Contact information
-    contact_person: Mapped[str] = mapped_column(String(255), nullable=False)
-    contact_phone: Mapped[str] = mapped_column(String(20), nullable=False)
+    contact_person: Mapped[Optional[str]] = mapped_column(String(255), nullable=True)
+    contact_phone: Mapped[Optional[str]] = mapped_column(String(20), nullable=True)
     contact_email: Mapped[Optional[str]] = mapped_column(String(255), nullable=True)
 
     # Pricing (INR per ton of stubble)

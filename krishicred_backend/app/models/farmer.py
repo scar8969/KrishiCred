@@ -18,7 +18,7 @@ from sqlalchemy import (
 from sqlalchemy.dialects.postgresql import UUID as PGUUID
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from app.db.base import Base, TimestampMixin
+from app.db.base import Base, TimestampMixin, SoftDeleteMixin
 
 if TYPE_CHECKING:
     from app.models.fire_alert import FireAlert
@@ -33,7 +33,7 @@ class Language(str, PyEnum):
     ENGLISH = "en"
 
 
-class Farmer(Base, TimestampMixin):
+class Farmer(Base, TimestampMixin, SoftDeleteMixin):
     """
     Farmer model representing individual farmers.
 
