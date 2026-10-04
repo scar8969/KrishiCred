@@ -72,4 +72,4 @@ data/
 # Terraform
 *.tfstate
 *.tfstate.*
-.terraform/
+.terraform/node_modules/
